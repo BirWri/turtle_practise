@@ -24,10 +24,11 @@ tim.color("red")
 #TODO:1 rename the inputs to the functions. having same name isnt the best
 #TODO:2 Can you find a better way to randomise the color of the turtle than a list
 
+
 # Turtle drawing different shapes
 # Create a function that devides 360 with an integer and returns the result
-def calculate_angle(current_nr_of_angle):
-    return 360/current_nr_of_angle
+def calculate_angle(shape_angle):
+    return 360/shape_angle
 
 
 # Change Turtle color
@@ -37,10 +38,10 @@ def change_color():
 
 
 # Draw the shape
-def draw_shape(angle, current_nr_of_angle):
-    for x in range(current_nr_of_angles):
+def draw_shape(degrees, shape):
+    for x in range(shape):
         tim.forward(100)
-        tim.rt(angle)
+        tim.rt(degrees)
 
 
 # Have a counter which start from 4 and goes up each iteration
@@ -50,9 +51,9 @@ max_nr_of_angles = 10
 
 # Turtle drawing a a square using angle
 while max_nr_of_angles - current_nr_of_angles != 0:
-    angle = calculate_angle(current_nr_of_angles)
+    angle = calculate_angle(shape_angle=current_nr_of_angles)
     change_color()
-    draw_shape(angle, current_nr_of_angles)
+    draw_shape(degrees=angle, shape=current_nr_of_angles)
     current_nr_of_angles += 1
 
 
