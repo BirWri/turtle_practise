@@ -9,8 +9,8 @@ tim.color("red")
 
 # Turtle starting position
 #tim.penup()
-#tim.setx(-300)
-#tim.sety(0)
+tim.setx(0)
+tim.sety(100)
 #tim.showturtle()
 
 # Turtle drawing a dashed line
@@ -21,7 +21,6 @@ tim.color("red")
 #    tim.penup()
 #    tim.forward(10)
 
-#TODO:1 rename the inputs to the functions. having same name isnt the best
 #TODO:2 Can you find a better way to randomise the color of the turtle than a list
 
 
