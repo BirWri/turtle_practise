@@ -21,8 +21,6 @@ tim.sety(100)
 #    tim.penup()
 #    tim.forward(10)
 
-#TODO:2 Can you find a better way to randomise the color of the turtle than a list
-
 
 # Turtle drawing different shapes
 # Create a function that devides 360 with an integer and returns the result
@@ -32,7 +30,7 @@ def calculate_angle(shape_angle):
 
 # Change Turtle color
 def change_color():
-    turtle_colors=["red", "blue", "green", "yellow", "brown", "pink"]
+    turtle_colors=["red", "blue", "green", "yellow", "brown", "pink", "light gray"]
     tim.color(turtle_colors[random.randint(0, 5)])
 
 
