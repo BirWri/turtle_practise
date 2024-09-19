@@ -3,58 +3,37 @@ from turtle import Turtle, Screen
 
 # Turtle features
 tim = Turtle()
-#tim.hideturtle()
-tim.shape("turtle")
-tim.color("red")
+tim.hideturtle()
+tim.speed(4)
+tim.pen(pensize=8)
 
 # Turtle starting position
-#tim.penup()
+tim.penup()
 tim.setx(0)
 tim.sety(100)
-#tim.showturtle()
-
-# Turtle drawing a dashed line
-#while tim.xcor() < 300:
-#    print(tim.xcor())
-#    tim.pendown()
-#    tim.forward(10)
-#    tim.penup()
-#    tim.forward(10)
+tim.pendown()
 
 
-# Turtle drawing different shapes
-# Create a function that devides 360 with an integer and returns the result
-def calculate_angle(shape_angle):
-    return 360/shape_angle
+# Turtle generates a random walk with random colors
+# Function for moving
+def turn_and_move():
+    directions = [0, 90, 180, 270]
+    direction = random.randint(0, 3)
+
+    tim.setheading(directions[direction])
+    tim.forward(20)
 
 
 # Change Turtle color
 def change_color():
     turtle_colors=["red", "blue", "green", "yellow", "brown", "pink", "light gray"]
-    tim.color(turtle_colors[random.randint(0, 5)])
+    tim.color(turtle_colors[random.randint(0, len(turtle_colors)-1)])
 
-
-# Draw the shape
-def draw_shape(degrees, shape):
-    for x in range(shape):
-        tim.forward(100)
-        tim.rt(degrees)
-
-
-# Have a counter which start from 4 and goes up each iteration
-current_nr_of_angles = 4
-max_nr_of_angles = 10
-# Have a for loop or a while look to draw all og the shapes
 
 # Turtle drawing a a square using angle
-while max_nr_of_angles - current_nr_of_angles != 0:
-    angle = calculate_angle(shape_angle=current_nr_of_angles)
+for x in range(100):
     change_color()
-    draw_shape(degrees=angle, shape=current_nr_of_angles)
-    current_nr_of_angles += 1
-
-
-
+    turn_and_move()
 
 
 screen = Screen()
