@@ -4,8 +4,8 @@ import turtle as t
 # Turtle features
 tim = t.Turtle()
 tim.hideturtle()
-tim.speed(4)
-tim.pen(pensize=8)
+tim.speed(0)
+tim.pen(pensize=4)
 
 # Turtle starting position
 tim.penup()
@@ -19,12 +19,10 @@ t.colormode(255)
 
 # Turtle generates a random walk with random colors
 # Function for moving
-def turn_and_move():
-    directions = [0, 90, 180, 270]
-    direction = random.randint(0, 3)
-
-    tim.setheading(directions[direction])
-    tim.forward(20)
+def turn_and_draw():
+    tim.tilt(10)
+    tim.setheading(tim.tiltangle())
+    tim.circle(40)
 
 
 # Change Turtle color
@@ -42,7 +40,7 @@ def change_color():
 # Turtle drawing a a square using angle
 for x in range(100):
     tim.color(change_color())
-    turn_and_move()
+    turn_and_draw()
 
 
 screen = t.Screen()
